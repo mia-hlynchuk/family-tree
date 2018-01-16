@@ -1,0 +1,25 @@
+.person {
+  border: 1px solid #7D7A7A;
+  width: 210px;
+  padding: 10px;
+  margin: 10px;
+  text-align: left;
+}
+
+.person h3 {
+  text-align: center;
+}
+.person label {
+  margin: 0 auto;
+}
+
+.person label span {
+  display: block;
+  
+}
+
+.person label input {
+  width: 200px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
