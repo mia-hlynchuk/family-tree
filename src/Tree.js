@@ -7,7 +7,7 @@ class Tree extends Component {
     super(props);
     
     this.state = {
-      selectedMember: 'root', // current person that is being edited
+      selectedMember: 'you', // current person that is being edited
       members: [] // holds all the family members
     }
 
@@ -37,7 +37,7 @@ class Tree extends Component {
         <header>
           <h1>Моє Сімейне Дерево</h1>
         </header>
-        <Person onSave={this.update} who="You"  />
+        <Person onSave={this.update} who="you"  />
       </div>
     );
   }

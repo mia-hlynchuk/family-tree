@@ -53,10 +53,10 @@ class Person extends Component {
     return (
       <div>
         <form>
-          <label><span>Ім'я:</span><input onChange={this.handleInputChange} name="firstName" type="text" /></label>
-          <label><span>Фамілія:</span><input onChange={this.handleInputChange} name="lastName" type="text" /></label>
-          <label><span>Дата народження:</span><input onChange={this.handleInputChange} name="dob" type="date" /></label>
-          <label><span>Місце народження:</span><input onChange={this.handleInputChange} name="pob" type="text" /></label>
+          <label><span>Ім'я:</span><input onChange={this.handleInputChange} defaultValue={this.state.info.firstName} name="firstName" type="text" /></label>
+          <label><span>Фамілія:</span><input onChange={this.handleInputChange} defaultValue={this.state.info.lastName} name="lastName" type="text" /></label>
+          <label><span>Дата народження:</span><input onChange={this.handleInputChange} defaultValue={this.state.info.dob} name="dob" type="date" /></label>
+          <label><span>Місце народження:</span><input onChange={this.handleInputChange} defaultValue={this.state.info.pob} name="pob" type="text" /></label>
           <button onClick={this.save}>Save</button> 
         </form>
       </div>
@@ -81,7 +81,7 @@ class Person extends Component {
   // final render result
   render() {
     return (
-      <div className={"person " + this.props.clName}>
+      <div className={"person " + this.props.who}>
         <h3>{this.props.who}</h3>
         { (this.state.editing) ? this.renderForm() : this.renderDisplay() }
       </div>
